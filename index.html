@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bluebay Hotel - Five-star luxury hotel in Kiambu County, Kenya. Experience premium accommodations, fine dining, and exclusive transport services.">
+    <meta name="keywords" content="luxury hotel Kenya, Kiambu hotel, five-star accommodation, executive rooms, fine dining Kenya, luxury transport">
+    <meta name="author" content="Bluebay Hotel">
+    <meta property="og:title" content="Bluebay Hotel | Five-Star Luxury Hotel Kenya">
+    <meta property="og:description" content="Experience unparalleled luxury at Bluebay Hotel. Premium accommodations, fine dining, and exclusive services in Kiambu County.">
+    <meta property="og:type" content="website">
+    <title>Bluebay Hotel | Five-Star Luxury Hotel in Kiambu, Kenya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4c430;
+            --gold-dark: #b8941f;
+            --blue: #1e40af;
+            --blue-dark: #172554;
+            --dark: #0a0a0b;
+            --dark-light: #1a1a1b;
+            --gray: #a1a1aa;
+            --white: #fafafa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 11, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .btn {
+            padding: 0.75rem 1.75rem;
+            background: var(--gold);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--gold);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 8rem 2rem 4rem;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1665480893803-62319e2e7e9b') center/cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(30, 64, 175, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+                linear-gradient(180deg, transparent 0%, rgba(10, 10, 11, 0.8) 100%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 700px;
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(10, 10, 11, 0.95), transparent);
+        }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+
+            .hero-image {
+                height: 600px;
+            }
+
+            .hero-image img {
+                height: 100%;
+            }
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--gray);
+            max-width: 600px;
+            margin: 1.5rem 0 2rem;
+            line-height: 1.7;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 0.25rem;
+            margin: 1.5rem 0;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* Features Bar */
+        .features-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            background: rgba(26, 26, 27, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-top: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--gray);
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-text p {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Section */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header span {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin: 1rem 0;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--dark-light);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Transport Carousel - Enhanced */
+        #transport {
+            background: linear-gradient(180deg, var(--dark) 0%, rgba(26, 26, 27, 0.5) 50%, var(--dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #transport::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: var(--dark-light);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        .carousel-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), transparent, rgba(59, 130, 246, 0.3));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            background: var(--dark-light);
+            position: relative;
+        }
+
+        .carousel-slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(180deg, rgba(10, 10, 11, 0.3) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .carousel-slide-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .carousel-slide.active img {
+            animation: zoomIn 0.8s ease-out;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(1.1);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .slide-overlay {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 10;
+        }
+
+        .slide-content {
+            padding: 2.5rem;
+            background: linear-gradient(180deg, var(--dark-light) 0%, rgba(10, 10, 11, 0.95) 100%);
+            position: relative;
+        }
+
+        .slide-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 2.5rem;
+            right: 2.5rem;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+        }
+
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .slide-title {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .slide-title h3 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--white), var(--gray));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .vehicle-type {
+            font-size: 0.9rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .vehicle-badge {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--dark);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vehicle-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            to {
+                left: 100%;
+            }
+        }
+
+        .slide-description {
+            color: var(--gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 700px;
+        }
+
+        .vehicle-features {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .feature-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: #60a5fa;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 2.5rem;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .carousel-dot::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: var(--gold);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .carousel-dot:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.2);
+        }
+
+        .carousel-dot.active {
+            background: var(--gold);
+            border-color: var(--gold);
+            transform: scale(1.3);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .carousel-dot.active::before {
+            opacity: 0.2;
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.2;
+            }
+            50% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+
+        .carousel-arrows {
+            position: absolute;
+            top: 250px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        .carousel-arrow {
+            width: 56px;
+            height: 56px;
+            background: rgba(10, 10, 11, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            pointer-events: all;
+            transition: all 0.3s ease;
+            font-size: 1.75rem;
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-arrow:hover {
+            background: var(--gold);
+            color: var(--dark);
+            border-color: var(--gold);
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .carousel-arrow:active {
+            transform: scale(0.95);
+        }
+
+        .transport-cta {
+            max-width: 1000px;
+            margin: 4rem auto 0;
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.15), rgba(212, 175, 55, 0.15));
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            backdrop-filter: blur(10px);
+        }
+
+        .transport-cta-content {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .transport-cta-content h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .transport-cta-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Gallery Section */
+        #gallery {
+            background: linear-gradient(180deg, var(--dark) 0%, rgba(10, 10, 11, 0.8) 50%, var(--dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #gallery::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            cursor: pointer;
+            background: var(--dark-light);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+            z-index: 1;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            min-height: 250px;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(10, 10, 11, 0.95), transparent);
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 2;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--white);
+        }
+
+        .gallery-overlay p {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .gallery-tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(212, 175, 55, 0.9);
+            backdrop-filter: blur(10px);
+            color: var(--dark);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+
+        .view-all-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .view-all-btn:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 10, 11, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .lightbox-content {
+            max-width: 1200px;
+            max-height: 90vh;
+            position: relative;
+            animation: zoomIn 0.4s ease;
+        }
+
+        .lightbox-image {
+            width: 100%;
+            height: auto;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -3rem;
+            right: 0;
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .lightbox-close:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: rotate(90deg);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .lightbox-nav:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .lightbox-prev {
+            left: -5rem;
+        }
+
+        .lightbox-next {
+            right: -5rem;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: -3rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(26, 26, 27, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        /* Contact */
+        .contact-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(26, 26, 27, 0.8);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: var(--gold);
+        }
+
+        .contact-info {
+            background: rgba(10, 10, 11, 0.5);
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin: 1.5rem 0;
+        }
+
+        .contact-info h4 {
+            font-size: 0.75rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            color: var(--gold-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-light);
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .hero {
+                padding: 6rem 1.5rem 3rem;
+                min-height: auto;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero-image {
+                display: none;
+            }
+
+            .badge {
+                font-size: 0.75rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            h1 {
+                margin-bottom: 0.75rem;
+            }
+
+            .stars {
+                font-size: 1.25rem;
+                margin: 1rem 0;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .features-bar {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+
+            .feature-item {
+                padding: 1rem;
+                background: rgba(10, 10, 11, 0.5);
+                border-radius: 12px;
+            }
+
+            .stat-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .carousel-slide img {
+                height: 300px;
+            }
+
+            .lightbox-prev,
+            .lightbox-next {
+                left: 1rem;
+                right: auto;
+            }
+
+            .lightbox-next {
+                left: auto;
+                right: 1rem;
+            }
+
+            .lightbox-close {
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .gallery-item.large,
+            .gallery-item.wide,
+            .gallery-item.tall {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .gallery-image {
+                min-height: 200px;
+            }
+
+            .slide-content {
+                padding: 1.5rem;
+            }
+
+            .slide-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .slide-title h3 {
+                font-size: 1.5rem;
+            }
+
+            .carousel-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+
+            .contact-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .footer-content,
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-header {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero {
+                padding: 7rem 2rem 3rem;
+            }
+
+            .features-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            .gallery-item.wide {
+                grid-column: span 2;
+            }
+
+            .gallery-item.tall {
+                grid-row: span 1;
+            }
+        }
+
+        /* Performance optimizations */
+        img {
+            content-visibility: auto;
+        }
+
+        .lazy {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .lazy.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">BLUEBAY <span></span></a>
+            <ul class="nav-links">
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#transport">Transport</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn">Reserve Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <div class="badge">
+                        <span class="pulse"></span>
+                        Five-Star Hotel & Tourism Destination
+                    </div>
+                    <h1>Bluebay <span style="color: var(--gold)">Hotel</span></h1>
+                    <div class="stars">★★★★★</div>
+                    <p>Experience unparalleled luxury, comfort, and privacy. Where executive elegance meets Kenyan hospitality in Kiambu County.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn">Contact Us to Reserve</a>
+                        <a href="#facilities" class="btn btn-outline">Explore Facilities</a>
+                    </div>
+
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">5★</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Service</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Premium</div>
+                            <div class="stat-label">Fleet</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Bluebay Hotel luxury hotel exterior" loading="eager">
+                    <div class="hero-image-overlay">
+                        <div class="location-badge">
+                            <span style="font-size: 1.25rem">📍</span>
+                            <span><strong>Kiambu County</strong>, Kenya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-bar">
+                <div class="feature-item">
+                    <div class="feature-icon" style="color: #60a5fa">🛏️</div>
+                    <div class="feature-text">
+                        <h4>Luxury Stays</h4>
+                        <p>Executive Rooms</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="color: var(--gold); background: rgba(212, 175, 55, 0.1)">🍽️</div>
+                    <div class="feature-text">
+                        <h4>Culinary Excellence</h4>
+                        <p>Fine Dining</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="color: #60a5fa">🍷</div>
+                    <div class="feature-text">
+                        <h4>Premium Experience</h4>
+                        <p>Exclusive Club</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities -->
+    <section id="facilities">
+        <div class="section-header">
+            <span>World-Class Amenities</span>
+            <h2>Premium Facilities</h2>
+            <p>Every detail designed for comfort, elegance, and unforgettable experiences.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./Images/photo-1631049307264-da0ec9d70304.jpg" alt="Executive Room at Bluebay Hotel with king-size bed and modern furnishings" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Executive Rooms</h3>
+                    <p>Spacious suites with premium bedding, modern amenities, and breathtaking views. Your sanctuary of comfort.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="./Images/photo-1672870634122-6ea7b16d2bb4" alt="Fine dining restaurant at Bluebay Hotel with elegant table settings" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Fine-Dining Restaurant</h3>
+                    <p>Savor exquisite cuisine crafted by master chefs. International and local flavors in an elegant setting.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="./Images/photo-1514933651103-005eec06c04b.jpg" alt="Exclusive club lounge at Bluebay Hotel with luxurious seating" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <h3>Exclusive Club & Lounge</h3>
+                    <p>Private lounge for discerning guests. Premium beverages, intimate atmosphere, and unparalleled service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+        <div class="section-header">
+            <span>Visual Experience</span>
+            <h2>Hotel Gallery</h2>
+            <p>Explore the elegance and luxury that defines Bluebay Hotel through our curated collection.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Large feature image -->
+            <div class="gallery-item large" onclick="openLightbox(0)">
+                <span class="gallery-tag">Featured</span>
+                <img src="./Images/photo-1566073771259-6a8506099945.jpg" alt="Bluebay Hotel luxury hotel exterior at sunset" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Hotel Exterior</h4>
+                    <p>Stunning architecture meets natural beauty</p>
+                </div>
+            </div>
+
+            <!-- Regular images -->
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="./Images/photo-1618773928121-c32242e63f39.jpg" alt="Bluebay Hotel luxury swimming pool" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Pool Area</h4>
+                    <p>Relaxation at its finest</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="./Images/photo-1578683010236-d716f9a3f461.jpg" alt="Bluebay Hotel executive suite bedroom" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Executive Suite</h4>
+                    <p>Ultimate comfort and privacy</p>
+                </div>
+            </div>
+
+            <div class="gallery-item wide" onclick="openLightbox(3)">
+                <span class="gallery-tag">Premium</span>
+                <img src="./Images/photo-1551882547-ff40c63fe5fa.jpg" alt="Bluebay Hotel elegant restaurant interior" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Fine Dining</h4>
+                    <p>Culinary excellence in elegant surroundings</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="./Images/photo-1582719478250-c89cae4dc85b.jpg" alt="Bluebay Hotel hotel lobby" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Grand Lobby</h4>
+                    <p>First impressions that last</p>
+                </div>
+            </div>
+
+            <div class="gallery-item tall" onclick="openLightbox(5)">
+                <img src="./Images/photo-1571896349842-33c89424de2d.jpg" alt="Bluebay Hotel hotel room balcony view" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Scenic Views</h4>
+                    <p>Breathtaking panoramas</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="./Images/photo-1590490360182-c33d57733427.jpg" alt="Bluebay Hotel spa and wellness" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Wellness Center</h4>
+                    <p>Rejuvenate your senses</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="./Images/photo-1542314831-068cd1dbfeeb.jpg" alt="Bluebay Hotel conference room" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Conference Hall</h4>
+                    <p>Business meets elegance</p>
+                </div>
+            </div>
+
+            <div class="gallery-item wide" onclick="openLightbox(8)">
+                <img src="./Images/photo-1455587734955-081b22074882.jpg" alt="Bluebay Hotel evening ambiance" class="gallery-image" loading="lazy">
+                <div class="gallery-overlay">
+                    <h4>Evening Ambiance</h4>
+                    <p>Enchanting nights at Bluebay Hotel</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center">
+            <a href="#contact" class="view-all-btn">
+                Book Your Experience
+                <span>→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox(event)">×</button>
+            <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1, event)">‹</button>
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1, event)">›</button>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Transport -->
+    <section id="transport">
+        <div class="section-header">
+            <span>Premium Transportation</span>
+            <h2>Luxury Transport Fleet</h2>
+            <p>Travel in style with our Bluebay Hotel branded luxury vehicles. Airport transfers and tourism services at your disposal.</p>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide active">
+                        <div class="carousel-slide-image">
+                            <img src="./Images/photo-1664353211813-7cf57172f7c2.jpg" alt="Toyota Prado luxury SUV Bluebay Hotel transport" loading="lazy">
+                            <div class="slide-overlay">
+                                <span class="vehicle-badge">BLUEBAY Hotel BRANDED</span>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <div class="slide-header">
+                                <div class="slide-title">
+                                    <span class="vehicle-type">Luxury SUV</span>
+                                    <h3>Toyota Prado</h3>
+                                </div>
+                            </div>
+                            <p class="slide-description">Spacious and powerful. Perfect for group travel and safari excursions with the Bluebay Hotel touch of luxury.</p>
+                            <div class="vehicle-features">
+                                <span class="feature-tag">✈️ Airport Transfers</span>
+                                <span class="feature-tag">🦁 Safari Ready</span>
+                                <span class="feature-tag">👥 7 Passengers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-image">
+                            <img src="./Images/photo-1617469767053-d3b523a0b982.jpg" alt="Mercedes-Benz luxury sedan Bluebay Hotel executive transport" loading="lazy">
+                            <div class="slide-overlay">
+                                <span class="vehicle-badge">BLUEBAY Hotel BRANDED</span>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <div class="slide-header">
+                                <div class="slide-title">
+                                    <span class="vehicle-type">Executive Sedan</span>
+                                    <h3>Mercedes-Benz</h3>
+                                </div>
+                            </div>
+                            <p class="slide-description">Sophisticated elegance for executive travel. Arrive in style with our premium Bluebay Hotel Mercedes-Benz fleet.</p>
+                            <div class="vehicle-features">
+                                <span class="feature-tag">💼 VIP Service</span>
+                                <span class="feature-tag">🎯 Business Class</span>
+                                <span class="feature-tag">👥 4 Passengers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-slide-image">
+                            <img src="./Images/photo-1606664515524-ed2f786a0bd6.jpg" alt="Range Rover luxury SUV Bluebay Hotel safari ready" loading="lazy">
+                            <div class="slide-overlay">
+                                <span class="vehicle-badge">BLUEBAY Hotel BRANDED</span>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <div class="slide-header">
+                                <div class="slide-title">
+                                    <span class="vehicle-type">Premium SUV</span>
+                                    <h3>Range Rover</h3>
+                                </div>
+                            </div>
+                            <p class="slide-description">Ultimate luxury meets off-road capability. Experience unparalleled comfort on any terrain with our Bluebay Hotel Range Rover fleet.</p>
+                            <div class="vehicle-features">
+                                <span class="feature-tag">🏔️ All Terrain</span>
+                                <span class="feature-tag">⭐ Ultra Premium</span>
+                                <span class="feature-tag">👥 5 Passengers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-arrows">
+                <button class="carousel-arrow" onclick="prevSlide()" aria-label="Previous slide">‹</button>
+                <button class="carousel-arrow" onclick="nextSlide()" aria-label="Next slide">›</button>
+            </div>
+
+            <div class="carousel-nav" id="carouselNav"></div>
+        </div>
+
+        <div class="transport-cta">
+            <div class="transport-cta-content">
+                <h3>🚗 Airport Transfer Services</h3>
+                <p>Seamless pickup and drop-off in luxury Bluebay Hotel vehicles. Available 24/7 for your convenience.</p>
+            </div>
+            <a href="#contact" class="btn">Book Your Ride</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section>
+        <div class="section-header">
+            <span>Complete Hospitality</span>
+            <h2>Tourism & Hospitality Services</h2>
+            <p>Beyond accommodation – your gateway to experiencing the best of Kenya.</p>
+        </div>
+
+        <div class="services">
+            <div class="service-card">
+                <div class="service-icon">🧭</div>
+                <h3>Tourism Packages</h3>
+                <p>Curated tours and excursions to Kenya's finest destinations. Safari, cultural visits, and more.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--gold)">💼</div>
+                <h3>Corporate Events</h3>
+                <p>Host meetings, conferences, and corporate retreats in our premium facilities with full support.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Concierge Services</h3>
+                <p>24/7 personalized assistance. From restaurant reservations to travel arrangements, we handle it all.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-header">
+            <h2>Reserve Your Stay</h2>
+            <p>Experience luxury, privacy, and unmatched hospitality at Bluebay Hotel.</p>
+        </div>
+
+        <div class="contact-box">
+            <div class="contact-icon">📧</div>
+            <h3 style="margin-bottom: 1rem">Exclusive Booking Process</h3>
+            <p style="color: var(--gray); margin-bottom: 2rem">Bookings available via email only. Contact us directly for personalized service and availability.</p>
+
+            <div class="contact-info">
+                <h4>Email Address</h4>
+                <a href="mailto:bluebay.john@gmail.com">bluebay.john@gmail.com</a>
+            </div>
+
+            <a href="mailto:bluebay.john@gmail.com" class="btn" style="margin-top: 2rem">Send Booking Inquiry</a>
+
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap">
+                <div style="text-align: center">
+                    <div style="color: #60a5fa; margin-bottom: 0.5rem">📍</div>
+                    <div style="font-size: 0.85rem; color: var(--gray)">Located in</div>
+                    <div style="font-weight: 600">Kiambu County, Kenya</div>
+                </div>
+                <div style="text-align: center">
+                    <div style="color: var(--gold); margin-bottom: 0.5rem">⭐</div>
+                    <div style="font-size: 0.85rem; color: var(--gray)">Rating</div>
+                    <div style="font-weight: 600">Five-Star Hotel</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="logo" style="margin-bottom: 0.5rem">BLUEBAY <span>Hotel</span></div>
+                <p style="color: var(--gray); font-size: 0.9rem">Five-Star Hotel & Tourism Destination</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#transport">Transport</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bluebay Hotel. All rights reserved.</p>
+            <p>Kiambu County, Kenya</p>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = track.querySelectorAll('.carousel-slide');
+        const navContainer = document.getElementById('carouselNav');
+
+        // Create nav dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot';
+            if (i === 0) dot.classList.add('active');
+            dot.onclick = () => goToSlide(i);
+            navContainer.appendChild(dot);
+        });
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        // Auto-play carousel
+        let autoPlay = setInterval(nextSlide, 5000);
+
+        // Pause on hover
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => clearInterval(autoPlay));
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoPlay = setInterval(nextSlide, 5000);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+
+        // Gallery Lightbox
+        const galleryImages = [
+            { src: './Images/photo-1566073771259-6a8506099945.jpg', caption: 'Hotel Exterior - Stunning architecture meets natural beauty' },
+            { src: './Images/photo-1618773928121-c32242e63f39.jpg', caption: 'Pool Area - Relaxation at its finest' },
+            { src: './Images/photo-1578683010236-d716f9a3f461.jpg', caption: 'Executive Suite - Ultimate comfort and privacy' },
+            { src: './Images/photo-1551882547-ff40c63fe5fa.jpg', caption: 'Fine Dining - Culinary excellence in elegant surroundings' },
+            { src: './Images/photo-1582719478250-c89cae4dc85b.jpg', caption: 'Grand Lobby - First impressions that last' },
+            { src: './Images/photo-1571896349842-33c89424de2d.jpg', caption: 'Scenic Views - Breathtaking panoramas' },
+            { src: './Images/photo-1590490360182-c33d57733427.jpg', caption: 'Wellness Center - Rejuvenate your senses' },
+            { src: './Images/photo-1542314831-068cd1dbfeeb.jpg', caption: 'Conference Hall - Business meets elegance' },
+            { src: './Images/photo-1455587734955-081b22074882.jpg', caption: 'Evening Ambiance - Enchanting nights at Bluebay Hotel' }
+        ];
+
+        let currentLightboxIndex = 0;
+
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+            
+            lightboxImage.src = galleryImages[index].src;
+            lightboxImage.alt = galleryImages[index].caption;
+            lightboxCaption.textContent = galleryImages[index].caption;
+            
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close')) {
+                const lightbox = document.getElementById('lightbox');
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function changeLightboxImage(direction, event) {
+            event.stopPropagation();
+            currentLightboxIndex = (currentLightboxIndex + direction + galleryImages.length) % galleryImages.length;
+            
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+            
+            lightboxImage.style.opacity = '0';
+            setTimeout(() => {
+                lightboxImage.src = galleryImages[currentLightboxIndex].src;
+                lightboxImage.alt = galleryImages[currentLightboxIndex].caption;
+                lightboxCaption.textContent = galleryImages[currentLightboxIndex].caption;
+                lightboxImage.style.opacity = '1';
+            }, 150);
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox({ target: lightbox });
+                if (e.key === 'ArrowLeft') changeLightboxImage(-1, e);
+                if (e.key === 'ArrowRight') changeLightboxImage(1, e);
+            }
+        });
+
+        // Lazy load images
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.add('loaded');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            lazyImages.forEach(img => imageObserver.observe(img));
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .service-card, .section-header').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
