@@ -76,6 +76,27 @@
             color: var(--gold);
         }
 
+        .logo img {
+            height: 50px;      /* desktop size */
+            width: auto;
+            display: block;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .logo img {
+                height: 40px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .logo img {
+                height: 32px;
+            }
+        }
+
+
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -139,7 +160,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: url('./Images/photo-1665480893803-62319e2e7e9b.jpg') center/cover;
+            background: url('./Images/photo-1665480893803-62319e2e7e9b.webp') center/cover;
             opacity: 0.2;
             z-index: 0;
         }
@@ -1142,6 +1163,36 @@
             font-size: 0.9rem;
             color: var(--gray);
         }
+        .btn1 {
+            padding: 0.75rem 1.75rem;
+            background: var(--gold);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+            .btn1:hover {
+                background: var(--gold-light);
+                transform: translateY(-2px);
+                box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            }
+
+            .btn1-outline {
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                color: var(--white);
+            }
+
+            .btn1-outline:hover {
+                background: rgba(255, 255, 255, 0.1);
+                border-color: var(--gold);
+            }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -1152,10 +1203,10 @@
             nav {
                 padding: 1rem 1.5rem;
             }
-             .btn {
-                padding: 8px 14px;
-                font-size: 13px;
-                border-radius: 18px;
+            .btn1 {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+                border-radius: 20px;
             }
 
             .hero {
@@ -1192,6 +1243,11 @@
 
             .btn {
                 width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+            .btn1 {
+                width: 40%;
                 text-align: center;
                 justify-content: center;
             }
@@ -1346,14 +1402,19 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">BLUEBAY <span></span></a>
+            <a href="#" class="logo">
+                <img src="images/logo.jpg" alt="Bluebay Logo">
+            </a>
+
             <ul class="nav-links">
                 <li><a href="#facilities">Facilities</a></li>
                 <li><a href="#transport">Transport</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="#contact" class="btn">Reserve Now</a>
+
+            <a href="#contact" class="btn1">Reserve Now</a>
         </nav>
+
     </header>
 
     <!-- Hero -->
@@ -1390,7 +1451,7 @@
                 </div>
 
                 <div class="hero-image">
-                    <img src="./Images/photo-1582719478250-c89cae4dc85b.jpg" alt="Bluebay Hotel luxury hotel exterior" loading="eager">
+                    <img src="./Images/photo-1582719478250-c89cae4dc85b.webp" alt="Bluebay Hotel luxury hotel exterior" loading="eager">
                     <div class="hero-image-overlay">
                         <div class="location-badge">
                             <span style="font-size: 1.25rem">📍</span>
@@ -1437,7 +1498,7 @@
         <div class="grid">
             <div class="card">
                 <div class="card-image">
-                    <img src="./Images/photo-1631049307264-da0ec9d70304.jpg" alt="Executive Room at Bluebay Hotel with king-size bed and modern furnishings" loading="lazy">
+                    <img src="./Images/photo-1631049307264-da0ec9d70304.webp" alt="Executive Room at Bluebay Hotel with king-size bed and modern furnishings" loading="lazy">
                 </div>
                 <div class="card-content">
                     <h3>Executive Rooms</h3>
@@ -1447,7 +1508,7 @@
 
             <div class="card">
                 <div class="card-image">
-                    <img src="./Images/photo-1672870634122-6ea7b16d2bb4.jpg" alt="Fine dining restaurant at Bluebay Hotel with elegant table settings" loading="lazy">
+                    <img src="./Images/photo-1672870634122-6ea7b16d2bb4.webp" alt="Fine dining restaurant at Bluebay Hotel with elegant table settings" loading="lazy">
                 </div>
                 <div class="card-content">
                     <h3>Fine-Dining Restaurant</h3>
@@ -1457,7 +1518,7 @@
 
             <div class="card">
                 <div class="card-image">
-                    <img src="./Images/photo-1514933651103-005eec06c04b.jpg" alt="Exclusive club lounge at Bluebay Hotel with luxurious seating" loading="lazy">
+                    <img src="./Images/THE-ARTS-CLUB_-Dubai-03-2048x1365-1-1174x783.webp" alt="Exclusive club lounge at Bluebay Hotel with luxurious seating" loading="lazy">
                 </div>
                 <div class="card-content">
                     <h3>Exclusive Club & Lounge</h3>
@@ -1479,7 +1540,7 @@
             <!-- Large feature image -->
             <div class="gallery-item large" onclick="openLightbox(0)">
                 <span class="gallery-tag">Featured</span>
-                <img src="./Images/photo-1566073771259-6a8506099945.jpg" alt="Bluebay Hotel luxury hotel exterior at sunset" class="gallery-image" loading="lazy">
+                <img src="./Images/SB-Architects_Conrad-Playa-Mita_Terrace.webp" alt="Bluebay Hotel luxury hotel exterior at sunset" class="gallery-image" loading="lazy">
                 <div class="gallery-overlay">
                     <h4>Hotel Exterior</h4>
                     <p>Stunning architecture meets natural beauty</p>
@@ -1488,15 +1549,15 @@
 
             <!-- Regular images -->
             <div class="gallery-item" onclick="openLightbox(1)">
-                <img src="./Images/photo-1618773928121-c32242e63f39.jpg" alt="Bluebay Hotel luxury swimming pool" class="gallery-image" loading="lazy">
+                <img src="./Images/photo-1618773928121-c32242e63f39.webp" alt="Bluebay Hotel luxury swimming pool" class="gallery-image" loading="lazy">
                 <div class="gallery-overlay">
-                    <h4>Pool Area</h4>
+                    <h4>Cozy sleep</h4>
                     <p>Relaxation at its finest</p>
                 </div>
             </div>
 
             <div class="gallery-item" onclick="openLightbox(2)">
-                <img src="./Images/photo-1578683010236-d716f9a3f461.jpg" alt="Bluebay Hotel executive suite bedroom" class="gallery-image" loading="lazy">
+                <img src="./Images/photo-1578683010236-d716f9a3f461.webp" alt="Bluebay Hotel executive suite bedroom" class="gallery-image" loading="lazy">
                 <div class="gallery-overlay">
                     <h4>Executive Suite</h4>
                     <p>Ultimate comfort and privacy</p>
@@ -1505,15 +1566,15 @@
 
             <div class="gallery-item wide" onclick="openLightbox(3)">
                 <span class="gallery-tag">Premium</span>
-                <img src="./Images/photo-1551882547-ff40c63fe5fa.jpg" alt="Bluebay Hotel elegant restaurant interior" class="gallery-image" loading="lazy">
+                <img src="./Images/photo-1551882547-ff40c63fe5fa.webp" alt="Bluebay Hotel elegant restaurant interior" class="gallery-image" loading="lazy">
                 <div class="gallery-overlay">
-                    <h4>Fine Dining</h4>
-                    <p>Culinary excellence in elegant surroundings</p>
+                    <h4>Pool Area</h4>
+                    <p>Breathtaking atmosphere</p>
                 </div>
             </div>
 
             <div class="gallery-item" onclick="openLightbox(4)">
-                <img src="./Images/photo-1582719478250-c89cae4dc85b.jpg" alt="Bluebay Hotel hotel lobby" class="gallery-image" loading="lazy">
+                <img src="./Images/https___www.ahstatic.com_photos_a5e1_rsr005_02_p_2048x1536.webp" alt="Bluebay Hotel hotel lobby" class="gallery-image" loading="lazy">
                 <div class="gallery-overlay">
                     <h4>Grand Lobby</h4>
                     <p>First impressions that last</p>
@@ -1521,7 +1582,7 @@
             </div>
 
             <div class="gallery-item tall" onclick="openLightbox(5)">
-                <img src="./Images/photo-1571896349842-33c89424de2d.jpg" alt="Bluebay Hotel hotel room balcony view" class="gallery-image" loading="lazy">
+                <img src="./Images/photo-1571896349842-33c89424de2d.webp" alt="Bluebay Hotel hotel room balcony view" class="gallery-image" loading="lazy">
                 <div class="gallery-overlay">
                     <h4>Scenic Views</h4>
                     <p>Breathtaking panoramas</p>
@@ -1529,7 +1590,7 @@
             </div>
 
             <div class="gallery-item" onclick="openLightbox(6)">
-                <img src="./Images/photo-1590490360182-c33d57733427.jpg" alt="Bluebay Hotel spa and wellness" class="gallery-image" loading="lazy">
+                <img src="./Images/photo-1590490360182-c33d57733427.webp" alt="Bluebay Hotel spa and wellness" class="gallery-image" loading="lazy">
                 <div class="gallery-overlay">
                     <h4>Wellness Center</h4>
                     <p>Rejuvenate your senses</p>
@@ -1537,7 +1598,7 @@
             </div>
 
             <div class="gallery-item" onclick="openLightbox(7)">
-                <img src="./Images/photo-1542314831-068cd1dbfeeb.jpg" alt="Bluebay Hotel conference room" class="gallery-image" loading="lazy">
+                <img src="./Images/a-large-conference-room-with-chairs-and-a-projector-screen-photo.webp" alt="Bluebay Hotel conference room" class="gallery-image" loading="lazy">
                 <div class="gallery-overlay">
                     <h4>Conference Hall</h4>
                     <p>Business meets elegance</p>
@@ -1545,7 +1606,7 @@
             </div>
 
             <div class="gallery-item wide" onclick="openLightbox(8)">
-                <img src="./Images/photo-1455587734955-081b22074882.jpg" alt="Bluebay Hotel evening ambiance" class="gallery-image" loading="lazy">
+                <img src="./Images/photo-1455587734955-081b22074882.webp" alt="Bluebay Hotel evening ambiance" class="gallery-image" loading="lazy">
                 <div class="gallery-overlay">
                     <h4>Evening Ambiance</h4>
                     <p>Enchanting nights at Bluebay Hotel</p>
@@ -1584,35 +1645,13 @@
             <div class="carousel-container">
                 <div class="carousel-track" id="carouselTrack">
                     <!-- Slide 1 -->
-                    <div class="carousel-slide active">
-                        <div class="carousel-slide-image">
-                            <img src="./Images/photo-1664353211813-7cf57172f7c2.jpg" alt="Toyota Prado luxury SUV Bluebay Hotel transport" loading="lazy">
-                            <div class="slide-overlay">
-                                <span class="vehicle-badge">BLUEBAY Hotel BRANDED</span>
-                            </div>
-                        </div>
-                        <div class="slide-content">
-                            <div class="slide-header">
-                                <div class="slide-title">
-                                    <span class="vehicle-type">Luxury SUV</span>
-                                    <h3>Toyota Prado</h3>
-                                </div>
-                            </div>
-                            <p class="slide-description">Spacious and powerful. Perfect for group travel and safari excursions with the Bluebay Hotel touch of luxury.</p>
-                            <div class="vehicle-features">
-                                <span class="feature-tag">✈️ Airport Transfers</span>
-                                <span class="feature-tag">🦁 Safari Ready</span>
-                                <span class="feature-tag">👥 7 Passengers</span>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Slide 2 -->
                     <div class="carousel-slide">
                         <div class="carousel-slide-image">
-                            <img src="./Images/photo-1617469767053-d3b523a0b982.jpg" alt="Mercedes-Benz luxury sedan Bluebay Hotel executive transport" loading="lazy">
+                            <img src="./Images/Gemini_Generated_Image_m6iebym6iebym6ie.webp" alt="Mercedes-Benz luxury sedan Bluebay Hotel executive transport" loading="lazy">
                             <div class="slide-overlay">
-                                <span class="vehicle-badge">BLUEBAY Hotel BRANDED</span>
+                                <span class="vehicle-badge">Luxury</span>
                             </div>
                         </div>
                         <div class="slide-content">
@@ -1634,9 +1673,9 @@
                     <!-- Slide 3 -->
                     <div class="carousel-slide">
                         <div class="carousel-slide-image">
-                            <img src="./Images/photo-1606664515524-ed2f786a0bd6.jpg" alt="Range Rover luxury SUV Bluebay Hotel safari ready" loading="lazy">
+                            <img src="./Images/Gemini_Generated_Image_l374mul374mul374 (1).webp" alt="Range Rover luxury SUV Bluebay Hotel safari ready" loading="lazy">
                             <div class="slide-overlay">
-                                <span class="vehicle-badge">BLUEBAY Hotel BRANDED</span>
+                                <span class="vehicle-badge">Luxury</span>
                             </div>
                         </div>
                         <div class="slide-content">
@@ -1651,6 +1690,29 @@
                                 <span class="feature-tag">🏔️ All Terrain</span>
                                 <span class="feature-tag">⭐ Ultra Premium</span>
                                 <span class="feature-tag">👥 5 Passengers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                 <div class="carousel-slide active">
+                        <div class="carousel-slide-image">
+                            <img src="./Images/prado-tx-hire-eldoret.webp" alt="Toyota Prado luxury SUV Bluebay Hotel transport" loading="lazy">
+                            <div class="slide-overlay">
+                                <span class="vehicle-badge">Luxury</span>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <div class="slide-header">
+                                <div class="slide-title">
+                                    <span class="vehicle-type">Luxury SUV</span>
+                                    <h3>Toyota Prado</h3>
+                                </div>
+                            </div>
+                            <p class="slide-description">Spacious and powerful. Perfect for group travel and safari excursions with the Bluebay Hotel touch of luxury.</p>
+                            <div class="vehicle-features">
+                                <span class="feature-tag">✈️ Airport Transfers</span>
+                                <span class="feature-tag">🦁 Safari Ready</span>
+                                <span class="feature-tag">👥 7 Passengers</span>
                             </div>
                         </div>
                     </div>
@@ -1741,7 +1803,9 @@
     <footer>
         <div class="footer-content">
             <div>
-                <div class="logo" style="margin-bottom: 0.5rem">BLUEBAY <span>Hotel</span></div>
+            <a href="#" class="logo">
+                <img src="images/logo.jpg" alt="Bluebay Logo">
+            </a>
                 <p style="color: var(--gray); font-size: 0.9rem">Five-Star Hotel & Tourism Destination</p>
             </div>
             <ul class="footer-links">
@@ -1812,15 +1876,15 @@
 
         // Gallery Lightbox
         const galleryImages = [
-            { src: './Images/photo-1566073771259-6a8506099945.jpg', caption: 'Hotel Exterior - Stunning architecture meets natural beauty' },
-            { src: './Images/photo-1618773928121-c32242e63f39.jpg', caption: 'Pool Area - Relaxation at its finest' },
-            { src: './Images/photo-1578683010236-d716f9a3f461.jpg', caption: 'Executive Suite - Ultimate comfort and privacy' },
-            { src: './Images/photo-1551882547-ff40c63fe5fa.jpg', caption: 'Fine Dining - Culinary excellence in elegant surroundings' },
-            { src: './Images/photo-1582719478250-c89cae4dc85b.jpg', caption: 'Grand Lobby - First impressions that last' },
-            { src: './Images/photo-1571896349842-33c89424de2d.jpg', caption: 'Scenic Views - Breathtaking panoramas' },
-            { src: './Images/photo-1590490360182-c33d57733427.jpg', caption: 'Wellness Center - Rejuvenate your senses' },
-            { src: './Images/photo-1542314831-068cd1dbfeeb.jpg', caption: 'Conference Hall - Business meets elegance' },
-            { src: './Images/photo-1455587734955-081b22074882.jpg', caption: 'Evening Ambiance - Enchanting nights at Bluebay Hotel' }
+            { src: './Images/photo-1566073771259-6a8506099945.webp', caption: 'Hotel Exterior - Stunning architecture meets natural beauty' },
+            { src: './Images/photo-1618773928121-c32242e63f39.webp', caption: 'Pool Area - Relaxation at its finest' },
+            { src: './Images/photo-1578683010236-d716f9a3f461.webp', caption: 'Executive Suite - Ultimate comfort and privacy' },
+            { src: './Images/photo-1551882547-ff40c63fe5fa.webp', caption: 'Fine Dining - Culinary excellence in elegant surroundings' },
+            { src: './Images/photo-1582719478250-c89cae4dc85b.webp', caption: 'Grand Lobby - First impressions that last' },
+            { src: './Images/photo-1571896349842-33c89424de2d.webp', caption: 'Scenic Views - Breathtaking panoramas' },
+            { src: './Images/photo-1590490360182-c33d57733427.webp', caption: 'Wellness Center - Rejuvenate your senses' },
+            { src: './Images/photo-1542314831-068cd1dbfeeb.webp', caption: 'Conference Hall - Business meets elegance' },
+            { src: './Images/photo-1455587734955-081b22074882.webp', caption: 'Evening Ambiance - Enchanting nights at Bluebay Hotel' }
         ];
 
         let currentLightboxIndex = 0;
@@ -1924,6 +1988,3 @@
 </body>
 
 </html>
-
-
-
